@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Events List</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+
+<div th:replace="layout :: layout (~{::section}, 'Events - List')">
+
+    <section>
+        <h1>Events</h1>
+        <div>
+            <a th:href="@{/events/create}" class="btn btn-primary mb-2">Create New Event</a>
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Location</th>
+                <th scope="col">Date</th>
+                <th scope="col">Description</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="event : ${events}">
+                <td th:text="${event.name}">Event Name</td>
+                <td th:text="${event.location}">Location</td>
+                <td th:text="${event.date}">Date</td>
+                <td th:text="${event.description}">Description</td>
+                <td>
+                    <a th:href="@{/events/edit/{id}(id=${event.id})}" class="btn btn-secondary btn-sm">Edit</a>
+                    <a th:href="@{/events/delete/{id}(id=${event.id})}" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="mt-4">
+            <a href="/" class="btn btn-info">Back to Home</a>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
