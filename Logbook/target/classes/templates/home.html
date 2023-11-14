@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Logbook</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<h1>Welcome to Logbook</h1>
+<nav>
+  <ul>
+    <li sec:authorize="!isAuthenticated()"><a th:href="@{/login}">Login</a></li>
+    <li sec:authorize="!isAuthenticated()"><a th:href="@{/register}">Register</a></li>
+    <li><a th:href="@{/events}">Events</a></li>
+    <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+  </ul>
+</nav>
+<div sec:authorize="isAuthenticated()">
+  <h2>Welcome back, <span sec:authentication="name">User</span>!</h2>
+  <p>This is your dashboard where you can see your events and activities.</p>
+  <div>
+    <a th:href="@{/events/create}" class="btn">Create New Event</a>
+    <a th:href="@{/events}" class="btn">View My Events</a>
+  </div>
+</div>
+<div sec:authorize="!isAuthenticated()">
+  <p>If you are new here, please register an account and start logging your events.</p>
+</div>
+</body>
+</html>

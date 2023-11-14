@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title} ?: 'Default Title'">Default Title</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<header>
+
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="@{/register}">Register</a></li>
+            <li><a th:href="@{/events}">Events</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div th:fragment="layout(content, title)">
+    <h1 th:text="${title}">Title</h1>
+    <div th:replace="${content}">
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Logbook Application</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/service/LogEntryService.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/service/UserService.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/model/LogEntry.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/LogbookApplication.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/repository/UserRepository.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/security/SecurityConfig.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/model/User.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/controller/AuthController.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/controller/HomeController.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/controller/LogEntryController.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/service/CustomUserDetailsService.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/model/Review.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/controller/UserController.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/model/Event.java
+/Users/danieljelacik/Documents/Logbook/src/main/java/Logbook/repository/LogEntryRepository.java
